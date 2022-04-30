@@ -1,0 +1,32 @@
+<ion-content>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>TastyFoods.com</h1>
+    <div class="avatar">
+      <ion-img src="assets\images\face.png"></ion-img>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Jumbotron -->
+    <div
+      class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white jumbo"
+    >
+      <h6>Enjoy Your Healthy delicious meal</h6>
+      <h1 class="mb-3 h1 display-1">Treat Yourself</h1>
+      <h6>Enjoy Your Healthy delicious meal</h6>
+    </div>
+    <!-- Jumbotron -->
+  </div>
+
+  <!-- PRODUCTS -->
+  <h1 class="list-header text-center mt-5">Welcome</h1>
+  <h3 class="text-center mb-5">Chose Your Food</h3>
+  <div class="food-list">
+    <app-food-card
+      *ngFor="let food of foods"
+      [item]="food"
+      (clicked)="goToDetailPage(food.id)"
+    ></app-food-card>
+  </div>
+</ion-content>
